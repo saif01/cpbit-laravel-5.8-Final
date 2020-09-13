@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+
+	<link rel="stylesheet" href="./bootstrap3.3.5.min.css" />
+	<!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+<script type="text/javascript" src="./jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="./jquery.validate.min.js"></script>
+
+<style type="text/css">
+	.error{
+		color:red;
+	}
+
+</style>
+
+</head>
+<body>
+
+	
+		<form id="signupForm" method="post" action="#">
+		<div class="form-group">
+			<label class="col-sm-12 control-label" for="start_mileage">Start Mileage :</label>
+			<div class="col-sm-12">
+				<input type="number" class="start_mileage form-control" id="start_mileage" name="start_mileage" placeholder="Put Meter Reading" min="0" max="999999999999" />
+			</div>
+	   </div>
+	  <div class="form-group">
+			<label class="col-sm-12 control-label" for="end_mileage">End Mileage :</label>
+			<div class="col-sm-12">
+				<input type="number" class="end_mileage form-control" id="end_mileage" name="end_mileage" placeholder="Put Meter Reading" min="0" max="999999999999" />
+			</div>
+	   </div>
+
+	 
+	   <div class="form-group">
+			<label class="col-sm-12 control-label" for="gas">Gasoline bill :</label>
+			<div class="col-sm-12">
+				<input type="number" class="gas form-control" id="gas" name="gas" placeholder="Amount of Taka" min="0" max="999999999999" />
+			</div>
+	   </div>
+	   <div class="form-group">
+			<label class="col-sm-12 control-label" for="octane">Octane bill :</label>
+			<div class="col-sm-12">
+				<input type="number" class="octane form-control" id="octane" name="octane" placeholder="Amount of Taka" min="0" max="999999999999" />
+			</div>
+	   </div>
+	   <div class="form-group">
+			<label class="col-sm-12 control-label" for="toll">Toll bill :</label>
+			<div class="col-sm-12">
+				<input type="number" class="toll form-control" id="toll" name="toll" placeholder="Amount of Taka" min="0" max="999999999999" />
+			</div>
+	   </div>
+
+	   <div class="form-group">
+			<label class="col-sm-12 control-label" for="driver_rating">Driver Rating :</label>
+			<div class="col-sm-12">
+				<input type="number" class="driver_rating form-control" id="driver_rating" name="driver_rating" placeholder="Put marking out of 10" min="0" max="10" />
+			</div>
+	   </div>
+
+
+	<div class="form-group">
+		<div class="col-sm-9 col-sm-offset-4">
+			<button type="submit" class="btn btn-primary" name="signup" value="Sign up">Without Validation</button>
+			<button type="submit" id="ValidationSubmit" class="btn btn-primary" name="signup" value="Sign up">With Validation</button>
+		</div>
+	</div>
+</form>
+
+	
+
+	
+
+<script type="text/javascript">
+	
+	$( document ).ready( function () {
+
+		$("#ValidationSubmit").click(function(){
+
+				$( "#signupForm" ).validate( {
+				rules: {
+					start_mileage: "required",
+					end_mileage: "required",
+					gas: "required",
+					octane: "required",
+					start_mileage: "required",
+					toll: "required",
+					driver_rating: "required",
+					
+				},
+				messages: {
+					start_mileage: "Start car meter reading",
+					end_mileage: "End car meter reading",
+					gas: "Please enter your Gasoline cost in taka  if not have then put 0",
+					octane: "Please enter your Octane cost in taka  if not have then put 0",
+					toll: "Please enter your Toll cost in taka  if not have then put 0 ",
+					driver_rating: "Please enter your Driver Rating (0 to 10)",
+					
+					
+				},
+				errorElement: "em",
+				errorPlacement: function ( error, element ) {
+					error.addClass( "help-block" );
+					error.insertAfter(element);
+					
+				},
+				highlight: function ( element, errorClass, validClass ) {
+					$( element ).parents( ".col-sm-5" ).addClass( "has-error" ).removeClass( "has-success" );
+				},
+				unhighlight: function (element, errorClass, validClass) {
+					$( element ).parents( ".col-sm-5" ).addClass( "has-success" ).removeClass( "has-error" );
+				}
+			} );
+
+
+		});
+
+			
+
+});
+
+
+
+</script>
+
+</body>
+</html>

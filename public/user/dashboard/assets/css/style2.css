@@ -1,0 +1,286 @@
+/*body{
+  font-family: Times New Roman;
+  background: url(../img/ay.jpg) ;
+    background-size: cover;
+    background-attachment: fixed;
+}*/
+ html, body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  /*background: url(../img/bg.png) no-repeat 50% 50%;*/
+  background-size: cover;
+  background-attachment: fixed;
+
+  }
+
+.loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader > img {
+    width: 20%;
+}
+
+.loader.hidden {
+    animation: fadeOut 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+  
+ /*#loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  overflow: visible;
+  background:#000 url('../img/preloader.gif') no-repeat center center; 
+
+ 
+}*/
+
+.nav_coustom{
+  border-bottom:2px solid red;
+  background-color:black;
+  opacity:0.7;
+}
+
+.foter_coustom{
+  background-color:black;
+  opacity:0.7;
+}
+
+
+.r_user {
+    border-radius:20%;
+    border: 2px solid #ffd000;   
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+   
+}
+
+.button1 {
+  border-radius: 4px;
+  background-color: #ffd000;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 100%;
+  /*height: 100%;*/
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+
+}
+
+.button1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  font-size: 45px;
+
+}
+
+.button1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  color:#696969;
+}
+
+.button1:hover span {
+  padding-right: 25px;
+  color:#696969;
+}
+
+.button1:hover span:after {
+  opacity: 1;
+  right: 0;
+  color:#696969;
+}
+
+/*Button 2 Effect*/
+.button2 {
+  border-radius: 4px;
+  background-color: #11f7d4;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 100%;
+  /*height: 100%;*/
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  font-size: 38px;
+}
+
+.button2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  color:#696969;
+}
+
+.button2:hover span {
+  padding-right: 25px;
+  color:#696969;
+}
+
+.button2:hover span:after {
+  opacity: 1;
+  right: 0;
+  color:#696969;
+}
+
+/*Button 3 Effect*/
+.button3 {
+  border-radius: 4px;
+  background-color:#228B22;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 100%;
+  /*height: 100%;*/
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button3 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  font-size: 38px;
+}
+
+.button3 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  color:#EEDFCC;
+}
+
+.button3:hover span {
+  padding-right: 25px;
+  color:#EEDFCC;
+}
+
+.button3:hover span:after {
+  opacity: 1;
+  right: 0;
+  color:#EEDFCC;
+}
+
+/*Button 4 Effect*/
+
+.button4 {
+  border-radius: 4px;
+  background-color: #912CEE;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 100%;
+  /*height: 100%;*/
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button4 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  font-size: 38px;
+}
+
+.button4 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  color:#191970;
+}
+
+.button4:hover span {
+  padding-right: 25px;
+  color:#191970;
+}
+
+.button4:hover span:after {
+  opacity: 1;
+  right: 0;
+  color:#191970;
+}
+
+
+
+
+
+/*Text Effect*/
+.header_saif {
+  text-align: center;
+  font-weight:  100;
+  font-size: 6rem;
+  color: red;
+  background: -webkit-linear-gradient(92deg, #000000, #FF1493);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 10s infinite linear;
+}
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}

@@ -1,0 +1,6 @@
+
+//Application Color
+#2575FF
+
+//Hardware Color
+#A0522D

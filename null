@@ -1,0 +1,2 @@
+Running scheduled command: "C:\xampp\php\php.exe" "artisan" carpool:today > "NUL" 2>&1
+Running scheduled command: "C:\xampp\php\php.exe" "artisan" room:today > "NUL" 2>&1
